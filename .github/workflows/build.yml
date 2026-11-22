@@ -12,13 +12,13 @@ jobs:
         with: {lfs: true}
       - uses: actions/setup-java@v4
         with: {java-version: '17', distribution: 'temurin'}
-      - name: Download Fernflower (Maven Central)
+      - name: Download CFR decompiler
         run: |
-          wget -q https://repo1.maven.org/maven2/org/jetbrains/fernflower/fernflower/2.0.1/fernflower-2.0.1.jar -O fernflower.jar
+          wget -q https://repo1.maven.org/maven2/org/benf/cfr/0.152/cfr-0.152.jar -O cfr.jar
       - name: Decompile original JAR
         run: |
           mkdir -p decompiled_src
-          java -jar fernflower.jar -dgs=1 -hdc=0 -rbr=0 -asc=1 -udv=0 CatNiang-1.5.0.jar decompiled_src/
+          java -jar cfr.jar --outputdir decompiled_src CatNiang-1.5.0.jar
           rm -rf CatNiang_Fabric/src/main/java
           mkdir -p CatNiang_Fabric/src/main/java
           cp -r decompiled_src/dev CatNiang_Fabric/src/main/java/
