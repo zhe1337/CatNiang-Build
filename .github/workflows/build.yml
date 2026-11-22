@@ -36,6 +36,18 @@ jobs:
             sed -i '/private void register() {/,/^    }/ s/^    }$/        MODULE.addModule(new PistonCrystalPlus());\n    }/' "$BULLWW_FILE"
           fi
           grep -A2 -B2 "PistonCrystalPlus" "$BULLWW_FILE" || echo "注册代码已插入"
+      - name: Create settings.gradle with Fabric plugin repo
+        run: |
+          cd CatNiang_Fabric
+          cat > settings.gradle << 'SETTINGS_EOF'
+pluginManagement {
+    repositories {
+        maven { url 'https://maven.fabricmc.net/' }
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'CatNiang'
+SETTINGS_EOF
       - name: Generate Gradle Wrapper
         run: |
           cd CatNiang_Fabric
