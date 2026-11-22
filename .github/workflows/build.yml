@@ -1,0 +1,91 @@
+name: Build CatNiang from Original JAR
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      # 1. 检出仓库代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true  # 支持大文件
+
+      # 2. 设置 JDK 17
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      # 3. 下载 Fernflower 反编译器
+      - name: Download Fernflower
+        run: |
+          wget -q https://github.com/fesh0r/fernflower/releases/download/2.0.1/fernflower.jar -O fernflower.jar
+
+      # 4. 解压配置文件夹（如果上传的是压缩包）
+      - name: Extract CatNiang_Fabric if needed
+        run: |
+          if [ -f CatNiang_Fabric.tar.gz ]; then
+            tar -xzf CatNiang_Fabric.tar.gz
+          fi
+
+      # 5. 反编译原始 JAR 得到真源码
+      - name: Decompile original JAR with Fernflower
+        run: |
+          mkdir -p decompiled_src
+          java -jar fernflower.jar \
+            -dgs=1 -hdc=0 -rbr=0 -asc=1 -udv=0 \
+            CatNiang-1.5.0.jar \
+            decompiled_src/
+          # 将反编译出的 dev 目录复制到项目源码位置
+          rm -rf CatNiang_Fabric/src/main/java
+          mkdir -p CatNiang_Fabric/src/main/java
+          cp -r decompiled_src/dev CatNiang_Fabric/src/main/java/
+
+      # 6. 确保 PistonCrystalPlus.java 在正确位置（覆盖/新增）
+      - name: Inject PistonCrystalPlus module
+        run: |
+          mkdir -p CatNiang_Fabric/src/main/java/dev/BULLWW/mod/modules/impl/combat/
+          # 如果仓库根目录有单独上传的 PistonCrystalPlus.java，复制过去
+          if [ -f PistonCrystalPlus.java ]; then
+            cp PistonCrystalPlus.java CatNiang_Fabric/src/main/java/dev/BULLWW/mod/modules/impl/combat/
+          fi
+          # 验证文件存在
+          ls -la CatNiang_Fabric/src/main/java/dev/BULLWW/mod/modules/impl/combat/PistonCrystalPlus.java
+
+      # 7. 修补 Bullww.java：注册新模块
+      - name: Patch Bullww.java to register PistonCrystalPlus
+        run: |
+          BULLWW_FILE="CatNiang_Fabric/src/main/java/dev/BULLWW/Bullww.java"
+          # 寻找 register 方法中的 AutoCrystal 注册行，在其后插入
+          if grep -q "MODULE.addModule(new AutoCrystal())" "$BULLWW_FILE"; then
+            sed -i '/MODULE.addModule(new AutoCrystal())/a\        MODULE.addModule(new PistonCrystalPlus());' "$BULLWW_FILE"
+            echo "✅ 已在 Bullww.java 注册 PistonCrystalPlus"
+          else
+            echo "⚠️ 未找到 AutoCrystal 注册行，尝试在 register 方法末尾插入"
+            # 备用方案：在 register() 方法的最后一个 } 前插入
+            sed -i '/private void register() {/,/^    }/ s/^    }$/        MODULE.addModule(new PistonCrystalPlus());\n    }/' "$BULLWW_FILE"
+          fi
+          # 显示修改结果
+          grep -A2 -B2 "PistonCrystalPlus" "$BULLWW_FILE" || echo "注册代码已插入"
+
+      # 8. 编译项目
+      - name: Build with Gradle
+        run: |
+          cd CatNiang_Fabric
+          chmod +x gradlew
+          ./gradlew build --no-daemon --stacktrace
+
+      # 9. 上传构建产物
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CatNiang-1.5.1.jar
+          path: CatNiang_Fabric/build/libs/*.jar
+          retention-days: 7
