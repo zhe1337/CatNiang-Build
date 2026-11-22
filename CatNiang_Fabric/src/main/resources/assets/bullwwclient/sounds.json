@@ -1,0 +1,37 @@
+{
+  "scroll": {
+    "sounds": [
+      "bullwwclient:scroll"
+    ]
+  },
+  "swipein": {
+    "sounds": [
+      "bullwwclient:swipein"
+    ]
+  },
+  "swipeout": {
+    "sounds": [
+      "bullwwclient:swipeout"
+    ]
+  },
+  "boolean": {
+    "sounds": [
+      "bullwwclient:boolean"
+    ]
+  },
+  "enable": {
+    "sounds": [
+      "bullwwclient:enable"
+    ]
+  },
+  "disable": {
+    "sounds": [
+      "bullwwclient:disable"
+    ]
+  },
+  "keypress": {
+    "sounds": [
+      "bullwwclient:keypress"
+    ]
+  }
+}

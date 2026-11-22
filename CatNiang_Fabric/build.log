@@ -1,0 +1,302 @@
+src/main/java/dev/BULLWW/Bullww$ModuleSoundWatcher.java:1: error: '{' expected
+public final class dev.BULLWW.Bullww$ModuleSoundWatcher {
+                      ^
+src/main/java/dev/BULLWW/Bullww$ModuleSoundWatcher.java:6: error: <identifier> expected
+    public void <init>() { ... }
+               ^
+src/main/java/dev/BULLWW/Bullww$ModuleSoundWatcher.java:6: error: '(' expected
+    public void <init>() { ... }
+                ^
+src/main/java/dev/BULLWW/Bullww$ModuleSoundWatcher.java:6: error: illegal start of type
+    public void <init>() { ... }
+                      ^
+src/main/java/dev/BULLWW/Bullww$ModuleSoundWatcher.java:6: error: illegal start of expression
+    public void <init>() { ... }
+                           ^
+src/main/java/dev/BULLWW/Bullww$ModuleSoundWatcher.java:7: error: illegal start of expression
+    public void onClientTick(dev.BULLWW.api.events.impl.ClientTickEvent arg0) { ... }
+                                                                                ^
+src/main/java/dev/BULLWW/Bullww$ModuleSoundWatcher.java:8: error: illegal start of expression
+    private void diagSky() { ... }
+                             ^
+src/main/java/dev/BULLWW/Bullww.java:1: error: '{' expected
+public class dev.BULLWW.Bullww implements net.fabricmc.api.ModInitializer {
+                ^
+src/main/java/dev/BULLWW/Bullww.java:31: error: <identifier> expected
+    public void <init>() { ... }
+               ^
+src/main/java/dev/BULLWW/Bullww.java:31: error: '(' expected
+    public void <init>() { ... }
+                ^
+src/main/java/dev/BULLWW/Bullww.java:31: error: illegal start of type
+    public void <init>() { ... }
+                      ^
+src/main/java/dev/BULLWW/Bullww.java:31: error: illegal start of expression
+    public void <init>() { ... }
+                           ^
+src/main/java/dev/BULLWW/Bullww.java:32: error: illegal start of expression
+    private static void checkBlockedUser() { ... }
+                                             ^
+src/main/java/dev/BULLWW/Bullww.java:33: error: illegal start of expression
+    public static java.lang.String getPrefix() { ... }
+                                                 ^
+src/main/java/dev/BULLWW/Bullww.java:34: error: illegal start of expression
+    private static void startBanGuard() { ... }
+                                          ^
+src/main/java/dev/BULLWW/Bullww.java:35: error: illegal start of expression
+    private static java.lang.String boundOwner() { ... }
+                                                   ^
+src/main/java/dev/BULLWW/Bullww.java:36: error: illegal start of expression
+    private static void hardKill() { ... }
+                                     ^
+src/main/java/dev/BULLWW/Bullww.java:37: error: illegal start of expression
+    public static void save() { ... }
+                                ^
+src/main/java/dev/BULLWW/Bullww.java:38: error: illegal start of expression
+    private void register() { ... }
+                              ^
+src/main/java/dev/BULLWW/Bullww.java:39: error: illegal start of expression
+    public void onInitialize() { ... }
+                                 ^
+src/main/java/dev/BULLWW/Bullww.java:40: error: <identifier> expected
+    private static synthetic void lambda$register$2() { ... }
+                            ^
+src/main/java/dev/BULLWW/Bullww.java:40: error: illegal start of expression
+    private static synthetic void lambda$register$2() { ... }
+                                                        ^
+src/main/java/dev/BULLWW/Bullww.java:41: error: ';' expected
+    private static synthetic java.lang.invoke.MethodHandles$Lookup lambda$register$1(java.lang.reflect.Method arg0, java.lang.Class arg1) { ... }
+                                 ^
+src/main/java/dev/BULLWW/Bullww.java:41: error: illegal start of expression
+    private static synthetic java.lang.invoke.MethodHandles$Lookup lambda$register$1(java.lang.reflect.Method arg0, java.lang.Class arg1) { ... }
+                                                                                                                                            ^
+src/main/java/dev/BULLWW/Bullww.java:42: error: <identifier> expected
+    private static synthetic void lambda$startBanGuard$0() { ... }
+                            ^
+src/main/java/dev/BULLWW/Bullww.java:42: error: illegal start of expression
+    private static synthetic void lambda$startBanGuard$0() { ... }
+                                                             ^
+src/main/java/dev/BULLWW/Bullww.java:43: error: <identifier> expected
+    static void <clinit>() { ... }
+               ^
+src/main/java/dev/BULLWW/Bullww.java:43: error: '(' expected
+    static void <clinit>() { ... }
+                ^
+src/main/java/dev/BULLWW/Bullww.java:43: error: illegal start of type
+    static void <clinit>() { ... }
+                        ^
+src/main/java/dev/BULLWW/Bullww.java:43: error: illegal start of expression
+    static void <clinit>() { ... }
+                             ^
+src/main/java/dev/BULLWW/api/utils/Wrapper.java:1: error: <identifier> expected
+public interface abstract interface dev.BULLWW.api.utils.Wrapper {
+                ^
+src/main/java/dev/BULLWW/api/utils/Wrapper.java:1: error: '{' expected
+public interface abstract interface dev.BULLWW.api.utils.Wrapper {
+                                       ^
+src/main/java/dev/BULLWW/api/utils/Wrapper.java:3: error: = expected
+    public static final net.minecraft.class_310 mc;
+                                                  ^
+src/main/java/dev/BULLWW/api/utils/Wrapper.java:5: error: <identifier> expected
+    static void <clinit>() { ... }
+               ^
+src/main/java/dev/BULLWW/api/utils/Wrapper.java:5: error: '(' expected
+    static void <clinit>() { ... }
+                ^
+src/main/java/dev/BULLWW/api/utils/Wrapper.java:5: error: illegal start of type
+    static void <clinit>() { ... }
+                        ^
+src/main/java/dev/BULLWW/api/utils/Wrapper.java:5: error: illegal start of expression
+    static void <clinit>() { ... }
+                             ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:1: error: '{' expected
+public final class dev.BULLWW.api.utils.win.ImeUtils {
+                      ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:9: error: <identifier> expected
+    private void <init>() { ... }
+                ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:9: error: '(' expected
+    private void <init>() { ... }
+                 ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:9: error: illegal start of type
+    private void <init>() { ... }
+                       ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:9: error: illegal start of expression
+    private void <init>() { ... }
+                            ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:10: error: illegal start of expression
+    public static boolean isWindows() { ... }
+                                        ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:11: error: illegal start of expression
+    private static com.sun.jna.Pointer hwnd() { ... }
+                                                ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:12: error: illegal start of expression
+    private static boolean isOwnProcess(com.sun.jna.Pointer arg0) { ... }
+                                                                    ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:13: error: illegal start of expression
+    public static boolean available() { ... }
+                                        ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:14: error: illegal start of expression
+    public static void setImeAllowed(boolean arg0) { ... }
+                                                     ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:15: error: illegal start of expression
+    public static void setCompositionPosition(int arg0, int arg1) { ... }
+                                                                    ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:16: error: illegal start of expression
+    public static void hideSystemWindows() { ... }
+                                             ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:17: error: illegal start of expression
+    private static void setWindowForms(int arg0, int arg1, int arg2) { ... }
+                                                                       ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:18: error: illegal start of expression
+    public static void reassert() { ... }
+                                    ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:19: error: illegal start of expression
+    public static void restore() { ... }
+                                   ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:20: error: illegal start of expression
+    public static dev.BULLWW.api.utils.win.ImeUtils$ImeData getImeData() { ... }
+                                                                           ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:21: error: illegal start of expression
+    private static void parseCandidates(byte[] arg0, java.util.List arg1) { ... }
+                                                                            ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:22: error: <identifier> expected
+    static void <clinit>() { ... }
+               ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:22: error: '(' expected
+    static void <clinit>() { ... }
+                ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:22: error: illegal start of type
+    static void <clinit>() { ... }
+                        ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils.java:22: error: illegal start of expression
+    static void <clinit>() { ... }
+                             ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$ImeData.java:1: error: '{' expected
+public final class dev.BULLWW.api.utils.win.ImeUtils$ImeData {
+                      ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$ImeData.java:6: error: <identifier> expected
+    public void <init>() { ... }
+               ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$ImeData.java:6: error: '(' expected
+    public void <init>() { ... }
+                ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$ImeData.java:6: error: illegal start of type
+    public void <init>() { ... }
+                      ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$ImeData.java:6: error: illegal start of expression
+    public void <init>() { ... }
+                           ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures.java:1: error: '{' expected
+public class dev.BULLWW.api.utils.win.CpuFeatures {
+                ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures.java:6: error: illegal start of expression
+    public static boolean isAvx2Supported() { ... }
+                                              ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures.java:7: error: illegal start of expression
+    private static boolean detectAvx2() { ... }
+                                          ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures.java:8: error: illegal start of expression
+    private static java.lang.Boolean detectViaHotspotUseAvx() { ... }
+                                                                ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures.java:9: error: <identifier> expected
+    private void <init>() { ... }
+                ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures.java:9: error: '(' expected
+    private void <init>() { ... }
+                 ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures.java:9: error: illegal start of type
+    private void <init>() { ... }
+                       ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures.java:9: error: illegal start of expression
+    private void <init>() { ... }
+                            ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures$Kernel32Lib.java:1: error: <identifier> expected
+interface abstract interface dev.BULLWW.api.utils.win.CpuFeatures$Kernel32Lib implements com.sun.jna.Library {
+         ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures$Kernel32Lib.java:1: error: '{' expected
+interface abstract interface dev.BULLWW.api.utils.win.CpuFeatures$Kernel32Lib implements com.sun.jna.Library {
+                                ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures$Kernel32Lib.java:3: error: = expected
+    public static final dev.BULLWW.api.utils.win.CpuFeatures$Kernel32Lib INSTANCE;
+                                                                                 ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures$Kernel32Lib.java:6: error: <identifier> expected
+    static void <clinit>() { ... }
+               ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures$Kernel32Lib.java:6: error: '(' expected
+    static void <clinit>() { ... }
+                ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures$Kernel32Lib.java:6: error: illegal start of type
+    static void <clinit>() { ... }
+                        ^
+src/main/java/dev/BULLWW/api/utils/win/CpuFeatures$Kernel32Lib.java:6: error: illegal start of expression
+    static void <clinit>() { ... }
+                             ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$User32.java:1: error: <identifier> expected
+public interface abstract interface dev.BULLWW.api.utils.win.ImeUtils$User32 implements com.sun.jna.Library {
+                ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$User32.java:1: error: '{' expected
+public interface abstract interface dev.BULLWW.api.utils.win.ImeUtils$User32 implements com.sun.jna.Library {
+                                       ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$User32.java:3: error: = expected
+    public static final dev.BULLWW.api.utils.win.ImeUtils$User32 INSTANCE;
+                                                                         ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$User32.java:7: error: <identifier> expected
+    static void <clinit>() { ... }
+               ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$User32.java:7: error: '(' expected
+    static void <clinit>() { ... }
+                ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$User32.java:7: error: illegal start of type
+    static void <clinit>() { ... }
+                        ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$User32.java:7: error: illegal start of expression
+    static void <clinit>() { ... }
+                             ^
+src/main/java/dev/BULLWW/api/utils/win/TextFocus.java:1: error: '{' expected
+public final class dev.BULLWW.api.utils.win.TextFocus {
+                      ^
+src/main/java/dev/BULLWW/api/utils/win/TextFocus.java:5: error: <identifier> expected
+    private void <init>() { ... }
+                ^
+src/main/java/dev/BULLWW/api/utils/win/TextFocus.java:5: error: '(' expected
+    private void <init>() { ... }
+                 ^
+src/main/java/dev/BULLWW/api/utils/win/TextFocus.java:5: error: illegal start of type
+    private void <init>() { ... }
+                       ^
+src/main/java/dev/BULLWW/api/utils/win/TextFocus.java:5: error: illegal start of expression
+    private void <init>() { ... }
+                            ^
+src/main/java/dev/BULLWW/api/utils/win/TextFocus.java:6: error: illegal start of expression
+    public static void acquire() { ... }
+                                   ^
+src/main/java/dev/BULLWW/api/utils/win/TextFocus.java:7: error: illegal start of expression
+    public static void release() { ... }
+                                   ^
+src/main/java/dev/BULLWW/api/utils/win/TextFocus.java:8: error: illegal start of expression
+    public static void clear() { ... }
+                                 ^
+src/main/java/dev/BULLWW/api/utils/win/TextFocus.java:9: error: illegal start of expression
+    public static boolean active() { ... }
+                                     ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$Imm32.java:1: error: <identifier> expected
+public interface abstract interface dev.BULLWW.api.utils.win.ImeUtils$Imm32 implements com.sun.jna.Library {
+                ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$Imm32.java:1: error: '{' expected
+public interface abstract interface dev.BULLWW.api.utils.win.ImeUtils$Imm32 implements com.sun.jna.Library {
+                                       ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$Imm32.java:3: error: = expected
+    public static final dev.BULLWW.api.utils.win.ImeUtils$Imm32 INSTANCE;
+                                                                        ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$Imm32.java:14: error: <identifier> expected
+    static void <clinit>() { ... }
+               ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$Imm32.java:14: error: '(' expected
+    static void <clinit>() { ... }
+                ^
+src/main/java/dev/BULLWW/api/utils/win/ImeUtils$Imm32.java:14: error: illegal start of type
+    static void <clinit>() { ... }
+                        ^
+100 errors
+only showing the first 100 errors, of 19221 total; use -Xmaxerrs if you would like to see more

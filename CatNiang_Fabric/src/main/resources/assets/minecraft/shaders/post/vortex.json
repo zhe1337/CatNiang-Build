@@ -1,0 +1,48 @@
+{
+  "targets": [
+    "bufIn",
+    "swap",
+    "blurH",
+    "bufOut"
+  ],
+  "passes": [
+    {
+      "name": "vortex",
+      "intarget": "bufIn",
+      "outtarget": "swap",
+      "uniforms": []
+    },
+    {
+      "name": "bloom_blur_h",
+      "intarget": "swap",
+      "outtarget": "blurH",
+      "uniforms": [
+        { "name": "BlurRadius", "values": [8.0] }
+      ]
+    },
+    {
+      "name": "bloom_blur_v",
+      "intarget": "blurH",
+      "outtarget": "swap",
+      "uniforms": [
+        { "name": "BlurRadius", "values": [8.0] }
+      ]
+    },
+    {
+      "name": "bloom_blur_h",
+      "intarget": "swap",
+      "outtarget": "blurH",
+      "uniforms": [
+        { "name": "BlurRadius", "values": [4.0] }
+      ]
+    },
+    {
+      "name": "bloom_blur_v",
+      "intarget": "blurH",
+      "outtarget": "bufOut",
+      "uniforms": [
+        { "name": "BlurRadius", "values": [4.0] }
+      ]
+    }
+  ]
+}

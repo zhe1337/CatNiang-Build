@@ -1,0 +1,73 @@
+plugins {
+    id "fabric-loom" version "1.7.4"
+    id "maven-publish"
+}
+
+version = "1.5.1"
+group = "dev.BULLWW"
+archivesBaseName = "CatNiang"
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+minecraft {
+    version = "1.21.1"
+    mappings = "net.fabricmc:intermediary:1.21.1"
+    runs {
+        client {
+            workingDirectory = file("run")
+            property "fabric.dli.config", "27"
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://maven.fabricmc.net" }
+    maven { url "https://maven.aliyun.com/repository/public" }
+    maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+    maven { url "https://maven.aliyun.com/repository/public" }
+    maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+    maven { url "https://maven.elytra.dev" }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.1"
+    mappings "net.fabricmc:intermediary:1.21.1"
+    modImplementation "net.fabricmc:fabric-loader:0.15.11"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.95.0+1.21.1"
+    
+    // 原版嵌套 JAR 的替代依赖
+    modImplementation "ca.spottedleaf.ias:ias-fabric:1.21.1-9.0.2"
+    modImplementation "io.github.fabricators-of-create:satin:2.0.0"
+    modImplementation "org.projectlombok:lombok:1.18.30"
+}
+
+jar {
+    manifest {
+        attributes(
+            "Fabric-Mod-Loader": ">=0.15.0",
+            "Fabric-Mod-Version": version,
+            "Fabric-Mod-Description": "CatNiang",
+            "Fabric-Mod-Authors": "CatNiang",
+            "Fabric-Mod-Contact": ""
+        )
+    }
+}
+
+// 包含资源文件
+tasks.withType(Jar) {
+    from("src/main/resources") {
+        include "fabric.mod.json"
+        include "bullww.accesswidener"
+        include "bullww.mixins.json"
+        include "kimi-title.mixins.json"
+    }
+}
+
+// 编译选项
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+}

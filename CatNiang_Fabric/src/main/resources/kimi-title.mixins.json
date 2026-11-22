@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.BULLWW.asm",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "mixins.TitleScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
