@@ -36,9 +36,14 @@ jobs:
             sed -i '/private void register() {/,/^    }/ s/^    }$/        MODULE.addModule(new PistonCrystalPlus());\n    }/' "$BULLWW_FILE"
           fi
           grep -A2 -B2 "PistonCrystalPlus" "$BULLWW_FILE" || echo "注册代码已插入"
+      - name: Generate Gradle Wrapper
+        run: |
+          cd CatNiang_Fabric
+          gradle wrapper --gradle-version 8.5
+          chmod +x gradlew
       - name: Build with Gradle
         run: |
-          cd CatNiang_Fabric && chmod +x gradlew && ./gradlew build --no-daemon --stacktrace
+          cd CatNiang_Fabric && ./gradlew build --no-daemon --stacktrace
       - uses: actions/upload-artifact@v4
         with:
           name: CatNiang-1.5.1.jar
